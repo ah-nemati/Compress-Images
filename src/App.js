@@ -1,25 +1,98 @@
-import logo from './logo.svg';
-import './App.css';
+import imageCompression from "browser-image-compression";
+import React, { useState } from "react";
 
-function App() {
+export default function App() {
+  const [upload, setUpload] = useState("");
+  const [file, setFile] = useState("");
+  const [compress, setCompress] = useState("");
+  const [download, setDownload] = useState("");
+
+  const handler = (e) => {
+    setUpload(e.target.files[0]);
+    setFile(URL.createObjectURL(e.target.files[0]));
+    setDownload(e.target.files[0].name);
+  };
+
+  const handlecompress = (e) => {
+    e.preventDefault();
+
+    if (!file) {
+      alert("please upload image");
+      return 0;
+    }
+
+    const option = {
+      maxsizeMB: 10,
+      maxWidthOrHeight: 1920,
+      useWebWorker: true,
+    };
+
+    if (option.maxsizeMB > 10) {
+      alert("please select a small image size !");
+      return 0;
+    }
+
+    imageCompression(upload, option).then((x) => {
+      const downloadlink = URL.createObjectURL(x);
+      console.log(x, downloadlink);
+      setCompress(downloadlink);
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="flex justify-center items-center mt-12"
+      style={{ height: 600 }}
+    >
+      <div className="flex-col justify-center">
+        {file ? (
+          <img
+            src={file}
+            className="rounded-md border-4"
+            alt="img"
+            style={{ width: 500, height: 500 }}
+          />
+        ) : (
+          <div
+            className="flex justify-center items-center border-2"
+            style={{ width: 500, height: 500 }}
+          >
+            upload image ...
+          </div>
+        )}
+        <div className="flex justify-center">
+          <input
+            onChange={(e) => handler(e)}
+            type="file"
+            role="button"
+            className="mt-6"
+          />
+          {compress ? (
+            <a
+              href={compress}
+              className="mt-4 text-lg text-white border-2 p-2 rounded-md bg-purple-500 hover:bg-purple-400"
+              download={download}
+            >
+              download
+            </a>
+          ) : (
+            <button
+              className="mt-4 text-lg text-white border-2 p-2 rounded-md 
+          bg-purple-500 hover:bg-purple-400"
+              onClick={(e) => handlecompress(e)}
+            >
+              compress image
+            </button>
+          )}
+        </div>
+        {compress ? (
+          <span className="pt-10 flex justify-center text-lg text-green-700">
+            compressed image sucessesfully !
+          </span>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 }
-
-export default App;
