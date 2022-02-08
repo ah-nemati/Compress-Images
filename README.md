@@ -1,2 +1,2 @@
 # CompressImages
-click to show [Compress-Image](https://amir9009.github.io/CompressImages/)
+click to show [Compress-Image](https://ah-nemati.github.io/CompressImages/)
