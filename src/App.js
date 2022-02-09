@@ -50,27 +50,35 @@ export default function App() {
             src={file}
             className="rounded-md border-4"
             alt="img"
-            style={{ width: 500, height: 500 }}
+            style={{ width: 400, height: 400 }}
           />
         ) : (
           <div
             className="flex justify-center items-center border-2"
-            style={{ width: 500, height: 500 }}
+            style={{ width: 400, height: 400 }}
           >
             upload image ...
           </div>
         )}
-        <div className="flex justify-center">
-          <input
-            onChange={(e) => handler(e)}
-            type="file"
-            role="button"
-            className="mt-6"
-          />
+        <div className="flex justify-between">
+          <label
+            htmlFor="upload"
+            className="bg-green-600 mt-4 px-4 py-3 rounded-sm text-white"
+            role={"button"}
+          >
+            <input
+              type="file"
+              onChange={(e) => handler(e)}
+              name="upload"
+              id="upload"
+              className="hidden"
+            />
+            Upload ...
+          </label>
           {compress ? (
             <a
               href={compress}
-              className="mt-4 text-lg text-white border-2 p-2 rounded-md bg-purple-500 hover:bg-purple-400"
+              className="mt-4 text-lg text-white px-4 py-3 rounded-md bg-purple-500 hover:bg-purple-400"
               download={download}
             >
               download
