@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,uCACE,eAAgB,CAChB,kBAAoB,CACpB,aAAc,CACd,UAAY,CACZ,wBAAyB,CACzB,WACF","file":"main.504fe629.chunk.css","sourcesContent":["input[type=\"file\"]::file-selector-button {\n  padding: 1em 2em;\n  border-radius: 0.2em;\n  transition: 1s;\n  color: white;\n  background-color: #10b981;\n  border: none;\n}\n"]}
