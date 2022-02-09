@@ -17,9 +17,8 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "watch:css": "postcss src/index.css -o src/output.css"
-  },
+    "eject": "react-scripts eject"
+    },
   "eslintConfig": {
     "extends": [
       "react-app",
