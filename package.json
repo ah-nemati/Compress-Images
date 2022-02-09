@@ -1,7 +1,7 @@
 {
   "name": "compress-images",
   "version": "1.0.0",
-  "homepage": "https://ah-nemati.github.io/CompressImages/",
+  "homepage": "https://ah-nemati.github.io/Compress-Images/",
   "private": false,
   "dependencies": {
     "axios": "^0.21.1",
