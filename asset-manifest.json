@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Compress-Images/static/css/main.c87e31e6.chunk.css",
-    "main.js": "/Compress-Images/static/js/main.5cd7bf4b.chunk.js",
-    "main.js.map": "/Compress-Images/static/js/main.5cd7bf4b.chunk.js.map",
+    "main.css": "/Compress-Images/static/css/main.3653e0ad.chunk.css",
+    "main.js": "/Compress-Images/static/js/main.c3d16f53.chunk.js",
+    "main.js.map": "/Compress-Images/static/js/main.c3d16f53.chunk.js.map",
     "runtime-main.js": "/Compress-Images/static/js/runtime-main.71345b4f.js",
     "runtime-main.js.map": "/Compress-Images/static/js/runtime-main.71345b4f.js.map",
     "static/js/2.a75208bb.chunk.js": "/Compress-Images/static/js/2.a75208bb.chunk.js",
     "static/js/2.a75208bb.chunk.js.map": "/Compress-Images/static/js/2.a75208bb.chunk.js.map",
     "index.html": "/Compress-Images/index.html",
-    "static/css/main.c87e31e6.chunk.css.map": "/Compress-Images/static/css/main.c87e31e6.chunk.css.map",
+    "static/css/main.3653e0ad.chunk.css.map": "/Compress-Images/static/css/main.3653e0ad.chunk.css.map",
     "static/js/2.a75208bb.chunk.js.LICENSE.txt": "/Compress-Images/static/js/2.a75208bb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.71345b4f.js",
     "static/js/2.a75208bb.chunk.js",
-    "static/css/main.c87e31e6.chunk.css",
-    "static/js/main.5cd7bf4b.chunk.js"
+    "static/css/main.3653e0ad.chunk.css",
+    "static/js/main.c3d16f53.chunk.js"
   ]
 }
